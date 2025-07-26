@@ -12,78 +12,46 @@ By the end of this module, you will:
 5. Implement and apply weight decay (L2 regularization)
 6. Analyze the bias-variance tradeoff
 
-## Files in This Module
+## 📁 Files in This Module
 
-### 1. `linear_regression_teaching.py`
-**From-Scratch Implementation**
-- Complete implementation of linear regression without using PyTorch's autograd
-- Manual gradient computation and parameter updates
-- Comprehensive comments explaining each step
-- Demonstrates fundamental concepts: forward pass, loss computation, backpropagation
+### Linear Regression - PyTorch Implementations
+- **`linear_regression_pytorch.py`** - Concise implementation using PyTorch's `nn.Module` and autograd
+- **`linear_regression_weight_decay.py`** - Demonstrates L2 regularization with visualization of overfitting
+- **`linear_regression_weight_decay_assignment.py`** - Student assignment with TODOs to implement weight decay
 
-**Key Features:**
-- Synthetic data generation
-- Mini-batch gradient descent
-- Training loop with progress monitoring
-- Visualization of training progress
+### Softmax Regression - PyTorch Implementation  
+- **`softmax_regression_pytorch.py`** - Multiclass classification using PyTorch's high-level APIs
 
-**Run with:**
-```bash
-python linear_regression_teaching.py
-```
+### Multi-Layer Perceptron (MLP) - Progressive Implementation Series
+**NEW: Complete MLP implementation series showing gradual complexity increase**
 
-### 2. `linear_regression_pytorch.py`
-**PyTorch High-Level API Implementation**
-- Uses `nn.Module`, `nn.Linear`, and automatic differentiation
-- Demonstrates PyTorch's optimization framework
-- Shows advanced features like gradient inspection and model evaluation modes
+- **`mlp_v1_basic.py`** - Basic MLP with ReLU activation and different initialization strategies
+  - Weight initialization methods (Random, He, Xavier)
+  - Forward and backward propagation
+  - Early stopping
+  - Synthetic house price prediction dataset
 
-**Key Features:**
-- `nn.Module` class definition
-- Automatic gradient computation with `loss.backward()`
-- PyTorch optimizers and loss functions
-- Data loading with `DataLoader`
-- Comparison with scratch implementation
+- **`mlp_v2_regularization.py`** - Adds L2 regularization to prevent overfitting
+  - L2 penalty implementation
+  - Regularization strength comparison
+  - Weight magnitude analysis
 
-**Run with:**
-```bash
-python linear_regression_pytorch.py
-```
+- **`mlp_v3_dropout.py`** - Adds dropout regularization for robust training
+  - Dropout implementation with proper scaling
+  - Training vs evaluation mode handling
+  - Monte Carlo dropout for uncertainty estimation
 
-### 3. `linear_regression_weight_decay.py`
-**Weight Decay and Regularization**
-- Demonstrates overfitting in high-dimensional scenarios (200 features, 20 samples)
-- Implements L2 regularization (weight decay)
-- Compares different regularization strengths
-- Comprehensive visualization of regularization effects
+- **`mlp_v4_cv.py`** - Adds cross-validation for robust evaluation
+  - K-fold cross-validation
+  - Grid search for hyperparameter optimization
+  - Nested cross-validation for unbiased performance estimation
 
-**Key Features:**
-- High-dimensional synthetic data generation
-- Custom model with L2 penalty computation
-- Training with multiple λ (lambda) values
-- 4-panel visualization showing:
-  - Training/validation loss curves
-  - Weight norm evolution
-  - Optimal λ selection
-  - Weight distribution changes
+- **`house_prices_demo.py`** - Comprehensive demonstration script
+  - Progressive comparison of all MLP versions
+  - Visualization of improvements from each technique
+  - Complete experimental pipeline
 
-**Run with:**
-```bash
-python linear_regression_weight_decay.py
-```
-
-### 4. `linear_regression_weight_decay_assignment.py`
-**Assignment Version**
-- Student version with TODO sections
-- Hands-on implementation of key concepts
-- Conceptual questions about regularization
-
-**Assignment Tasks:**
-1. Implement L2 penalty calculation
-2. Complete training loop with weight decay
-3. Implement validation loop
-4. Analyze different λ values
-5. Answer conceptual questions
+### Assignment Materials
 
 ## Key Concepts Covered
 
